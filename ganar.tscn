@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://deiokf6qs4hw5"]
+
+[ext_resource type="FontFile" uid="uid://b7cpo018kp6u3" path="res://PressStart2P-Regular.ttf" id="1_ocpng"]
+[ext_resource type="Texture2D" uid="uid://djgrronksiksb" path="res://pixilart-sprite (7).png" id="2_wypsw"]
+[ext_resource type="Script" uid="uid://cvkvuvuc3djs6" path="res://animated_sprite_2d.gd" id="3_wypsw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu1st"]
+atlas = ExtResource("2_wypsw")
+region = Rect2(0, 0, 997, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rp7u"]
+atlas = ExtResource("2_wypsw")
+region = Rect2(997, 0, 997, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5m4ne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu1st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rp7u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1731225112]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1444880080]
+offset_right = 1174.0
+offset_bottom = 665.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1119725906]
+offset_left = 357.0
+offset_top = 113.0
+offset_right = 763.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("1_ocpng")
+theme_override_font_sizes/font_size = 58
+text = "Ganaste"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1373762457]
+position = Vector2(536, 427)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_5m4ne")
+script = ExtResource("3_wypsw")
